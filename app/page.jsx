@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Button from '@components/Button';
 import About from './About/page';
 import TopSelling from './TopSelling';
+import NewsLetter from './NewsLetter';
 
 export default function Home() {
  
@@ -21,8 +22,7 @@ export default function Home() {
           Elevate your style and make a statement <br /> with our luxurious selection. Discover the 
           <br/>perfect addition to your jewelry box today.
           </p>
-
-          <Button text="Shop Now" />
+          <Button text="Shop Now" className="btn"/>
        
 
        </div>
@@ -52,6 +52,7 @@ export default function Home() {
     </section>
     <TopSelling />
     <About />
+    <NewsLetter/>
     </>
   )
 }

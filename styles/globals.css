@@ -32,6 +32,7 @@
 
 *::-webkit-scrollbar-thumb {
   background-color: #87511C;
+  border-radius: 5rem;
 }
 
 
@@ -60,7 +61,7 @@
 }
 
 .btn {
-  @apply rounded-sm border border-[#87511C] my-6 bg-[#87511C] py-3 px-10 text-white transition-all hover:bg-white hover:text-[#87511C] text-center text-sm flex items-center justify-center;
+  @apply rounded-md py-3 px-10 text-white transition-all text-center text-sm flex items-center justify-center border border-[#87511C] my-6 bg-[#87511C] hover:bg-white hover:text-[#87511C];
 }
 
 .outline_btn {
@@ -75,7 +76,7 @@
 }
 
 .desc {
-  @apply my-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+  @apply my-5 text-base text-[#8A8A8A] sm:text-xl max-w-2xl;
 }
 
 .flex-center {
