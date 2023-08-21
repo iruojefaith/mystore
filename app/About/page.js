@@ -18,8 +18,9 @@ const About = () => {
         </div>
             <div className='md:w-5/12 mt-4 '>
             <h2 className='sub_head_text'>The Brand</h2>
-            <p className='desc'>Our jewelry brand was born from a love of beauty and a passion for craftsmanship. Our founder's desire to create unique and meaningful jewelry led her to start the brand, and her vision has been at the heart of everything we do.</p>
-            <p className='desc'>Each piece of jewelry is crafted with care and attention to detail, and we strive to create pieces that are not only beautiful but also meaningful.</p> 
+            <p className='desc'>Our jewelry brand was born from a love of beauty and a passion for craftsmanship. 
+            Our founder's desire to create unique and meaningful jewelry led her to start the brand, and her vision has been at the heart of everything we do.
+            <br/>Each piece of jewelry is crafted with care and attention to detail, and we strive to create pieces that are not only beautiful but also meaningful.</p> 
         </div>
 
     </section>
