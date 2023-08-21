@@ -5,6 +5,7 @@ import Button from '@components/Button';
 import About from './About/page';
 import TopSelling from './TopSelling';
 import NewsLetter from './NewsLetter';
+import Collections from './Collections';
 
 export default function Home() {
  
@@ -52,6 +53,7 @@ export default function Home() {
     </section>
     <TopSelling />
     <About />
+    <Collections />
     <NewsLetter/>
     </>
   )
