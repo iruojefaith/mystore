@@ -2,7 +2,7 @@
 
 const Footer = () => {
     return (
-  <footer className=' bg-[#D3BFB4] h-96 '>
+  <footer className=' bg-[#D3BFB4]'>
           <div className="contain py-16 grid grid-cols-1 lg:grid-cols-2  gap-2">
               <div className="pt-9">
                     <h3 className='sub_head_text'>MyStore</h3>

@@ -9,7 +9,7 @@ const TopSelling = () => {
             <h2 className='sub_head_text'>Top Selling Jewelry</h2>
             <p className='desc'>Necklace, Rings, Bracelet</p>
             </div>
-        <div className='flex-center flex-row gap-2 '>
+        <div className='flex-center flex-col md:flex-row gap-2 '>
             <div className='flex flex-col gap-2'>
                 <Image
               src="/topselling.png"

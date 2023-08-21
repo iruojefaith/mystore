@@ -3,13 +3,13 @@ import Image from 'next/image';
 const About = () => {
   return (
     
-         <section className='contain md:flex m-auto h-[40rem] gap-4 '>
+         <section className='contain flex flex-col md:flex-row m-auto h-[40rem] gap-4 '>
       
             <div className='md:w-5/12 flex justify-end'>
         <Image
               src="/About.png"
               alt="About Img"
-              className="left-[5.5rem] absolute object-fill"
+              className="left-[5.5rem] object-fill"
               width={400}
               height={400}
               priority
