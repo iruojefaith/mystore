@@ -69,14 +69,16 @@
 }
 
 .head_text {
-  @apply mt-5 text-4xl font-normal leading-10 text-black md:text-6xl font-garamond;
+  @apply mt-10 text-4xl font-normal leading-10 text-black md:text-5xl font-garamond;
 }
 .sub_head_text{
-  @apply  font-normal leading-10 text-black md:text-4xl font-garamond;
+  @apply  font-normal text-3xl leading-10 text-black md:text-4xl font-garamond;
 }
-
+.card_head_text{
+  @apply  font-normal text-2xl leading-10 text-black md:text-3xl font-garamond;
+}
 .desc {
-  @apply my-5 text-base text-[#8A8A8A] sm:text-xl max-w-2xl;
+  @apply my-10 text-base text-[#8A8A8A] sm:text-xl max-w-2xl;
 }
 
 .flex-center {

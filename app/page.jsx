@@ -11,28 +11,28 @@ export default function Home() {
  
   return (
     <> 
-    <section className="w-full h-[45rem] bg-[#D3BFB4] flex-center flex-col md:flex-row md:-mt-[10rem]">
-
-    {/*className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"*/}
-       <div className='w-[70%] md:-ml-10'> 
-       
+    <div className="w-full h-[63rem] md:h-[40rem] bg-[#D3BFB4] ">
+<div className='contain grid grid-cols-1 lg:grid-cols-3 gap-2'>
+   <div className='col-span-2'>    
           <h1 className='head_text ' >
-          Adore Yourself in Timeless Elegance Discover Our Exquisite Jewelry<br/> Collection Today
+          Adore Yourself in Timeless Elegance <br/>Discover Our Exquisite Jewelry<br/> Collection Today
           </h1>
           <p className='desc'>
           Elevate your style and make a statement <br /> with our luxurious selection. Discover the 
           <br/>perfect addition to your jewelry box today.
           </p>
-          <Button text="Shop Now" className="btn"/>
+          <div className='my-10'>
+           <Button text="Shop Now" className="btn"/> 
+          </div>
+          
        
 
        </div>
-       <div className='flex flex-row md:w-[20%] top-14 md:-ml-60 relative'>
-      
-            
+       <div className='flex flex-row md:mt-[6rem] relative'>
+       
             <Image
               src="/heroimg2.png"
-              alt="Vercel Logo"
+              alt="header Image"
               className="  left-[5.5rem] absolute object-fill"
               width={400}
               height={400}
@@ -40,17 +40,20 @@ export default function Home() {
             /> 
             <Image
               src="/heroimg1.png"
-              alt="Vercel Logo"
-              className="top-36 md:-left-[5rem] relative object-fill"
+              alt="header Image"
+              className="top-40 md:-left-[14rem] relative object-fill"
               width={400}
               height={400}
               priority
             />
             
        </div>
+</div>
+    {/*className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"*/}
+      
           
       
-    </section>
+    </div>
     <TopSelling />
     <About />
     <Collections />

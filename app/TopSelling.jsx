@@ -2,10 +2,9 @@ import Image from 'next/image';
 
 const TopSelling = () => {
   return (
-    
-         <section className='contain m-auto gap-1 w-11/12'>
+    <div className='-mt-30 md:mt-9'>
+        <div className='contain gap-1'>
             <div className=' flex-center flex-col '>
-              
             <h2 className='sub_head_text'>Top Selling Jewelry</h2>
             <p className='desc'>Necklace, Rings, Bracelet</p>
             </div>
@@ -15,16 +14,16 @@ const TopSelling = () => {
               src="/topselling.png"
               alt="topselling Img"
               className=""
-              width={400}
-              height={400}
+              width={300}
+              height={300}
               priority
             /> 
              <Image
               src="/topselling2.png"
               alt="topselling Img"
               className=""
-              width={400}
-              height={400}
+              width={300}
+              height={300}
               priority
             />
              </div>
@@ -32,13 +31,15 @@ const TopSelling = () => {
                 <Image
               src="/topselling3.png"
               alt="topselling Img"
-              className="object-fill "
-              width={600}
-              height={600}
+              className="object-fill mb-3"
+              width={400}
+              height={400}
               priority
             /> 
             </div>         
-    </section>
+    </div>
+    </div>
+       
     
   )
 }
