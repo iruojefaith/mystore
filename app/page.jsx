@@ -33,7 +33,7 @@ export default function Home() {
             <Image
               src="/heroimg2.png"
               alt="header Image"
-              className="  left-[5.5rem] absolute object-fill"
+              className="  left-[2.5rem] md:left-[5.5rem] absolute object-fill"
               width={400}
               height={400}
               priority
@@ -41,7 +41,7 @@ export default function Home() {
             <Image
               src="/heroimg1.png"
               alt="header Image"
-              className="top-40 md:-left-[14rem] relative object-fill"
+              className="top-40 -left-[4rem] md:-left-[14rem] relative object-fill"
               width={400}
               height={400}
               priority

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const TopSelling = () => {
   return (
-    <div className='-mt-30 md:mt-9'>
+    <div className='mt-6 md:mt-9'>
         <div className='contain gap-1'>
             <div className=' flex-center flex-col '>
             <h2 className='sub_head_text'>Top Selling Jewelry</h2>

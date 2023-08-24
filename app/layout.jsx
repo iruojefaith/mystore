@@ -2,7 +2,6 @@ import { Children } from 'react';
 import '@styles/globals.css';
 import Nav from '@components/Nav';
 import Footer from '@components/Footer';
-import Provider from '@components/Provider';
 
 export const metadata = {
   title: 'Mystore',
@@ -12,14 +11,12 @@ export const metadata = {
 const RootLayout = ({children}) => {
   return (
     <html lang="en">
-      <body>
-       
-       <main> 
+      <body>  
+        <main> 
         <Nav />
         {children}
         <Footer />
-        </main>  
-
+        </main> 
       </body>
       
     </html>

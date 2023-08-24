@@ -38,6 +38,7 @@
 
 .main {
   width: 100vw;
+  max-width: 1600px;
   min-height: 100vh;
   position: fixed;
   display: flex;
@@ -74,13 +75,18 @@
 .sub_head_text{
   @apply  font-normal text-3xl leading-10 text-black md:text-4xl font-garamond;
 }
+.h4{
+  @apply  font-semibold text-sm text-black  ;
+}
 .card_head_text{
   @apply  font-normal text-2xl leading-10 text-black md:text-3xl font-garamond;
 }
 .desc {
   @apply my-10 text-base text-[#8A8A8A] sm:text-xl max-w-2xl;
 }
-
+.sub_desc {
+  @apply text-base text-[#8A8A8A] sm:text-sm max-w-2xl;
+}
 .flex-center {
   @apply flex justify-center items-center align-middle;
 }
