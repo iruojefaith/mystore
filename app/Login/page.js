@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Register from './register';
+import GoogleLogin from './GoogleLogin';
 
-const page = () => {
+const LoginSignupPage = () => {
+  const [showRegister, setShowRegister] = useState(false);
+
+  const handleShowRegister = () => {
+    setShowRegister(true);
+    
+  };
+
+
+
   return (
-    <div>page</div>
-  )
-}
+    <div>
+      
+      <button href="/register" onClick={handleShowRegister}>Register</button>
 
-export default page
+      {/* Render the Register component if showRegister is true */}
+      {showRegister && <Register />}
+    </div>
+  );
+};
+
+export default LoginSignupPage;

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Button from "./Button";
+import Login from "../app/Login/page"
 
 const Nav = () => {
   const [active, setActive] = useState(false);
@@ -10,6 +11,7 @@ const Nav = () => {
   const handleClick = () => {
     setActive(!active);
   };
+
 
   return (
     <>
@@ -70,14 +72,16 @@ const Nav = () => {
             </Link>
           </div>
           <div className="flex flex-col md:flex-row" >
-             <Link href="/login"
+             <Link href="app/Login/page"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-[#8A8A8A] font-normal items-center justify-center bg-[#D3BFB4] hover:text-[#8A8A8A]">
-                Login
-            </Link>
-            <Button text="Sign up" />
+               
+            </Link> 
+            <Login/>
+            {/* <Button text="Sign up"  /> */}
+
           </div>
         </div>
-        
+                
         </div>
       </nav>
     </>
