@@ -1,7 +1,9 @@
+'use client'
 import { Children } from 'react';
-import '@styles/globals.css';
-import Nav from '@components/Nav';
-import Footer from '@components/Footer';
+import '../styles/globals.css';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
+import { AuthContextProvider } from '../context/AuthContext';
 
 export const metadata = {
   title: 'Mystore',
@@ -13,9 +15,12 @@ const RootLayout = ({children}) => {
     <html lang="en">
       <body>  
         <main> 
-        <Nav />
+          <AuthContextProvider>
+            <Nav />
         {children}
         <Footer />
+          </AuthContextProvider>
+        
         </main> 
       </body>
       

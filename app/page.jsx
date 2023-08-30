@@ -1,7 +1,7 @@
 
 
 import Image from 'next/image';
-import Button from '@components/Button';
+import Button from '../components/Button';
 import About from './About/page';
 import TopSelling from './TopSelling';
 import NewsLetter from './NewsLetter';

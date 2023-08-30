@@ -1,17 +1,34 @@
 'use client'
 
 import Link from "next/link";
-import { useState } from "react";
-import Button from "./Button";
-import Login from "../app/Login/page"
+import { useState, useEffect } from "react";
+import { UserAuth } from '../context/AuthContext';
 
 const Nav = () => {
+
+
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
     setActive(!active);
   };
+  const [loading, setLoading] = useState(true);
+  const { user, logOut } = UserAuth();
+  const handleSignOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 50));
+      setLoading(false);
+    };
+    checkAuthentication();
+  }, [user]);
 
   return (
     <>
@@ -55,6 +72,7 @@ const Nav = () => {
             active ? "" : "hidden"
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto md:gap-16`}
         >
+        
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
             <Link href="/"
              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-[#8A8A8A] font-normal items-center justify-center bg-[#D3BFB4] hover:text-[#8A8A8A] ">
@@ -70,19 +88,39 @@ const Nav = () => {
                 About
              
             </Link>
-          </div>
-          <div className="flex flex-col md:flex-row" >
-             <Link href="app/Login/page"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-[#8A8A8A] font-normal items-center justify-center bg-[#D3BFB4] hover:text-[#8A8A8A]">
-               
-            </Link> 
-            <Login/>
-            {/* <Button text="Sign up"  /> */}
 
           </div>
+       
+          {!user ? null : (
+          <li className="p-2 cursor-pointer">
+            <Link href="/profile">Profile</Link>
+          </li>
+        )}
+        {loading ? null : !user ? (
+              <div className="flex flex-col md:flex-row ">
+                <Link href="/Login" className="p-2 cursor-pointer" >
+                  Login
+                </Link>
+                <li className="p-2 cursor-pointer">
+                  Sign up
+                </li>
+              </div>
+            
+            ) : (
+              <div>
+                <p>Welcome, {user.displayName}</p>
+                <p className="cursor-pointer" onClick={handleSignOut}>
+                  Sign out
+                </p>
+              </div>
+            )}
+              
+            
         </div>
-                
-        </div>
+      
+
+    
+    </div>
       </nav>
     </>
   );
