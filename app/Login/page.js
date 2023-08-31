@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { UserAuth } from '../../context/AuthContext';
+import Shop from '../Shop/Products'
 
 export default function Login() {
 
@@ -73,7 +74,7 @@ export default function Login() {
             Forget Password?
           </Link>
           <div className="mt-2">
-            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#87511C] rounded-md hover:text-[#87511C] border-[#87511C] hover:bg-[#fff] focus:outline-none focus:bg-[#805122]">
               Sign In
             </button>
           </div>
@@ -127,7 +128,7 @@ export default function Login() {
       </div>
             ) : (
               <div>
-                <p>Welcome</p>
+                <Shop />
                 
                 
               </div>
