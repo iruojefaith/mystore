@@ -1,36 +1,72 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router';
+import Link from 'next/link';
+import { useParams } from 'next/navigation'
 import Skeleton from 'react-loading-skeleton';
-import ActiveLink from './ActiveLink'
+import { useRouter } from 'next/navigation';
 
-function Product() {
+function Product({params}) {
 
-    const { id } = useParams();
+    // const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
+    const router = useRouter()
+
+    // console.log(router.query.slug)
 
     useEffect(() => {
         const getProduct = async () => {
             setLoading(true);
-            const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-            const data = await response.json();
-            setProduct(data);
-            setLoading(false);
+            // fetch(`https://fakestoreapi.com/products/${id}`)
+            // .then(response => response.json())
+            // .then(result => {
+            //     setProduct(data);
+            // setLoading(false)
+            // })
+            // .catch(error => console.log('error', error));
+
+            const axios = require('axios');
+
+let config = {
+  method: 'get',
+  maxBodyLength: Infinity,
+  url: `https://fakestoreapi.com/products/${params.item}`,
+  headers: { }
+};
+
+async function makeRequest() {
+  try {
+    const response = await axios.request(config);
+    console.log(response);
+    if (response.data){
+        setProduct(response?.data)
+        setLoading(false)
+    } else {
+        setLoading(true)
+    }
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
+
+makeRequest();
         }
         getProduct();
-    }, [id]);
+    }, []);
+
+    console.log(params.item)
 
     const Loading = () => {
         return (
             <>
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-12">
-                        <ActiveLink className="text-decoration-none text-dark" to={`/`}>
+                        <Link className="text-decoration-none text-dark" href={`/`}>
                             <div className="d-flex align-items-center m-3">
                                 <Skeleton height={20} width={50} />
                             </div>
-                        </ActiveLink>
+                        </Link>
                         <div>
                             <div className="row">
                                 <div className="col-md-6">
@@ -79,12 +115,12 @@ function Product() {
             <>
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-12">
-                        <ActiveLink className="text-decoration-none text-dark" to={`/`}>
+                        <Link className="text-decoration-none text-dark" href='.'>
                             <div className="d-flex align-items-center m-3">
                                 <i className="fa fa-long-arrow-left"></i>
                                 <span className="ml-1">&nbsp;Back</span>
                             </div>
-                        </ActiveLink>
+                        </Link>
                         <div>
                             <div className="row">
                                 <div className="col-md-6">

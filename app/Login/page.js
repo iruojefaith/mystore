@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { UserAuth } from '../../context/AuthContext';
-import Shop from '../Shop/Products'
+import Shop from '../shop/page'
 
 export default function Login() {
 
@@ -17,6 +17,7 @@ export default function Login() {
     } catch (error) {
       console.log(error);
     }
+    window.location.href = "/shop";
   };
 
   
@@ -127,11 +128,9 @@ export default function Login() {
         </p>
       </div>
             ) : (
-              <div>
-                <Shop />
-                
-                
-              </div>
+              <>
+                {window.location.href = "/shop"}
+              </>
             )}
     </div>
   );
